@@ -55,7 +55,7 @@ button {
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.1s ease, background-color 0.2s;
     color: white;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -63,6 +63,12 @@ button {
 
 button:hover {
     background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .operator {
@@ -81,6 +87,7 @@ button:hover {
 .clear {
     background: #ff4d4d;
     color: white;
+    grid-column: span 4;
 }
 
 .clear:hover {
@@ -107,9 +114,9 @@ button:hover {
 }
 
 .logo {
-    width: 60px; /* Adjust size */
+    width: 60px;
     height: 60px;
-    border-radius: 50%; /* Makes it round */
+    border-radius: 50%;
     object-fit: cover;
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
